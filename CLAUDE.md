@@ -6,6 +6,7 @@
 - watchlist-architect
 - analyst-ratings
 - hedge-fund-analyst
+- biotech-cio
 
 ## Project Purpose
 
@@ -110,3 +111,29 @@ The `hedge-fund-analyst` should:
 5. Record unresolved discrepancies in `logs/conflicts.md`.
 6. Preserve prior conclusions and document thesis changes.
 7. Never use analyst ratings as the primary investment thesis.
+## Biotech CIO Workflow
+
+The `biotech-cio` should:
+
+1. Run only after the other four agents have completed their current research cycle.
+2. Read all current files in `data/`, `reports/`, `research/`, and `logs/`.
+3. Audit PDUFA dates, watchlist classifications, analyst actions, company scores, and investment memos.
+4. Identify stale, incomplete, conflicting, or unsupported information.
+5. Review `logs/conflicts.md` before producing a final report.
+6. Assign company-priority statuses.
+7. Produce `reports/daily_biotech_brief.md`.
+8. Produce `reports/weekly_cio_report.md`.
+9. Preserve unresolved conflicts and carry them into future reports.
+10. Never execute trades or convert uncertain research into a guaranteed prediction.
+
+## Full Team Workflow
+
+Run the team in this order:
+
+1. `pdufa-analyst`
+2. `watchlist-architect`
+3. `analyst-ratings`
+4. `hedge-fund-analyst`
+5. `biotech-cio`
+
+The `biotech-cio` is the final review and quality-control agent.
