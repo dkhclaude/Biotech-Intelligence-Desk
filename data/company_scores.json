@@ -1,1 +1,8 @@
-
+{
+  "last_updated": null,
+  "scoring_conventions": {
+    "quality_scores": "1 is weakest and 5 is strongest",
+    "risk_scores": "1 is lowest risk and 5 is highest risk"
+  },
+  "companies": []
+}
